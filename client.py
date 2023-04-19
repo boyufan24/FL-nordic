@@ -34,7 +34,7 @@ class Client(object):
 
     def get_dataloader(self, dataset, idxs):
         idxs_train = idxs[:int(1 * len(idxs))]
-        print(len(idxs_train))
+        # print(len(idxs_train))
         train_dataloader = DataLoader(DatasetSplit(dataset, idxs_train), self.args.batch_size, shuffle=True)
         return train_dataloader
 

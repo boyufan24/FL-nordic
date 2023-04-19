@@ -64,6 +64,8 @@ def experiment(args):
         for key in global_model_parameter:
             global_model_parameter[key] /= args.num_users
         
+        # let's test first, if the out of memory, we can store each model of the client on the disk and aggregate them one by one
+        
         # global model update
         global_model.load_state_dict(global_model_parameter)
         
